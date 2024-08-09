@@ -18,20 +18,20 @@ body {
 
 .logo {
     position: absolute;
-    top: 15%;
-    left: 8%;
-    width: auto;
-    height: auto;
-    max-width: 120px;
-    max-height: 120px;
+    top: 15vh;
+    left: 8vw;
+    /*width: auto;
+    height: auto;*/
+    max-width: 15vw;
+    max-height: 15vh;
 }
 
 .cloud {
     position: absolute;
-    top: 9px;
-    left: 600px;
+    top: -5vh;
+    left: 40%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 20vw;
     height: auto;
     display: flex;
     align-items: center;
@@ -40,18 +40,18 @@ body {
 }
 
 .cloud-img {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
 
 .lightning-bolt {
     position: absolute;
-    width: 150px;
+    width: 12vw;
     height: auto;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    top: 200px;
-    left: 40%;
+    top: 90%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
