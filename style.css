@@ -9,7 +9,8 @@ body {
 
 .hero {
     background-image: url(assets/images/jd-hero-background.webp);
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,8 +21,6 @@ body {
     position: absolute;
     top: 15vh;
     left: 8vw;
-    /*width: auto;
-    height: auto;*/
     max-width: 15vw;
     max-height: 15vh;
 }
@@ -57,4 +56,15 @@ body {
 
 .cloud:hover .lightning-bolt {
     opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+      background-image: url(assets/images/jon-portfolio-mobile-background.webp);
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 }
