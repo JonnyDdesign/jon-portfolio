@@ -1,7 +1,7 @@
 # Jon's Portfolio
 
 ## About the Project
-I decided my portfolio needs a refresh and therefore this project will represent an updated version of my portfolio.  
+I decided my portfolio needed a refresh and therefore this project will represent an updated version of my portfolio.  
 
 I have an idea in mind of making an interactive website for larger screens and an alternate UI for smaller screens and mobile. 
 
