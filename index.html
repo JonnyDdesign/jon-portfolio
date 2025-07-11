@@ -22,12 +22,24 @@
 <body>
 
     <main class="hero">
-        <img src="assets/images/jd_logo.webp" alt="Logo" class="logo">
+        <!-- Logo with hidden menu -->
+        <div class="logo-container">
+            <img src="assets/images/jd_logo.webp" alt="Logo" class="logo">
+            <ul class="logo-menu">
+                <li><a href="">About Me</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- SVG reveal on hover -->
         <div class="cloud">
             <img src="assets/images/cloud.svg" alt="cloud" class="cloud-img">
             <img src="assets/images/lightning-bolt.svg" alt="Lightning bolt" class="lightning-bolt">
         </div>
     </main>
+
+    <script src="script.js" defer></script>
     
 </body>
 </html>
