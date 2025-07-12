@@ -21,7 +21,7 @@ body {
 
 .logo-container {
     position: absolute;
-    top: 13%;
+    top: 10%;
     left: 9%;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@ body {
 
 .cloud {
     position: absolute;
-    top: -5vh;
+    top: -3vh;
     left: 40%;
     transform: translateX(-50%);
     width: 20vw;
@@ -100,10 +100,6 @@ body {
 }
 
 @media (max-width: 1700px) {
-    .logo-container {
-        top: 12%;
-        left: 8%;
-    }
 
     .logo {
         max-width: 180px;
@@ -183,9 +179,23 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      width: 100vw;
+      height: 100vh;
     }
 
     .cloud {
         display: none;
+    }
+}
+
+@media (max-width: 435px) {
+    .logo-container {
+        top: 10%;
+        left: 37%;
+    }
+
+    .logo {
+        max-width: 100px;
+        max-height: 100px;
     }
 }
