@@ -15,51 +15,48 @@ body {
     background-image: url(assets/images/jd-hero-background.webp);
     width: 100%;
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
 }
 
 .logo-container {
     position: absolute;
-    top: 15%;
-    left: 2%;
+    top: 13%;
+    left: 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .logo {
     max-width: 220px;
     max-height: 220px;
     cursor: pointer;
+    padding-bottom: 20px;
 }
 
 .logo-menu {
-    min-width: 200px;
     display: none;
-    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
     padding: 10px;
-    margin-top: 5px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    position: absolute;
-    top: 100%;
-    left: 30px;
+    list-style: none;
     z-index: 10;
+    box-shadow: 0 0 20px rgba(249, 247, 247, 0.9);
 }
 
 .logo-menu li {
     font-size: 3rem;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .logo-menu li a {
     text-decoration: none;
-    color: #000000;
+    color: #FFFFFF;
     font-weight: bold;
 }
 
-.logo-container:hover .logo-menu {
+.logo-container:hover .logo-menu, .logo-menu:hover {
     display: block;
 }
 
@@ -73,7 +70,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .cloud-img {
@@ -96,8 +92,89 @@ body {
     opacity: 1;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1900px) {
+    .logo {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
 
+@media (max-width: 1700px) {
+    .logo-container {
+        top: 12%;
+        left: 8%;
+    }
+
+    .logo {
+        max-width: 180px;
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .logo {
+        max-width: 160px;
+        max-height: 160px;
+    }
+
+    .logo-menu li {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .logo {
+        max-width: 140px;
+        max-height: 140px;
+    }
+
+    .logo-menu li {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        background-image: url(assets/images/jd-hero-background-small.webp);
+    }
+
+    .logo-container {
+        top: 10%;
+        left: 8%;
+    }
+
+    .logo {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .cloud {
+        top: -2vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .logo-container {
+        top: 8%;
+        left: 9%;
+    }
+
+    .logo {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-container {
+        top: 6%;
+        left: 9%;
+    }
+
+    .logo {
+        max-width: 80px;
+        max-height: 80px;
+    }
 }
 
 @media (max-width: 500px) {
