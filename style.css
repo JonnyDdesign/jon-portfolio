@@ -1,14 +1,21 @@
-*, *::before, *::after {
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* Locally hosted fonts */
+@font-face {
+    font-family: 'Irish Grover';
+    src: url('/assets/fonts/IrishGrover-Regular.woff2') format('woff2'),
+         url('/assets/fonts/IrishGrover-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .hero {
@@ -51,6 +58,7 @@ body {
 }
 
 .logo-menu li a {
+    font-family: 'Irish Grover', Times, serif;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
@@ -195,13 +203,13 @@ body {
 
     .logo-container {
         top: 9%;
-        left: 31%;
+        left: 23%;
         align-items: center;
     }
 
     .logo {
-        max-width: 120px;
-        max-height: 120px;
+        max-width: 110px;
+        max-height: 110px;
     }
 
     .logo-menu {
@@ -211,6 +219,7 @@ body {
         background-color: transparent;
         box-shadow: none;
         align-items: center;
+        padding-top: 20px;
     }
     
     .logo-menu li {
@@ -222,30 +231,56 @@ body {
     .logo-menu li a {
         display: block;
         width: 100%;
-        padding: 12px 20px;
-        background-color: #000000;
+        padding: 15px 25px;
+        background-color: rgba(0, 0, 0, 0.6);
         color: #ffffff;
-        border-radius: 6px;
-        font-size: 1.5rem;
+        border-radius: 8px;
+        font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
         text-decoration: none;
         transition: background-color 0.3s ease;
     }
-    
-    .logo-menu li a:hover {
-        background-color: #0d6efd;
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        left: 21%;
+    }
+}
+
+@media (max-width: 460px) {
+    .logo-container {
+        left: 20%;
     }
 }
 
 @media (max-width: 435px) {
     .logo-container {
-        top: 10%;
-        left: 37%;
-    }
-
-    .logo {
-        max-width: 100px;
-        max-height: 100px;
+        left: 19%;
     }
 }
+
+@media (max-width: 410px) {
+    .logo-container {
+        left: 18%;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo-container {
+        left: 16%;
+    }
+}
+
+@media (max-width: 370px) {
+    .logo-container {
+        left: 14%;
+    }
+}
+
+@media (hover: none) {
+    .logo-menu li a:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}  
