@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Locally hosted fonts */
 @font-face {
     font-family: 'Irish Grover';
@@ -19,11 +15,20 @@ html {
 }
 
 .hero {
-    background-image: url(assets/images/jd-hero-background.webp);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .logo-container {
@@ -141,10 +146,6 @@ html {
 }
 
 @media (max-width: 1000px) {
-    .hero {
-        background-image: url(assets/images/jd-hero-background-small.webp);
-    }
-
     .logo-container {
         top: 10%;
         left: 8%;
