@@ -23,7 +23,11 @@
 
     <main class="hero">
         <!-- Background image -->
-        <img src="assets/images/jd-hero-background.webp" alt="Hero background" class="hero-bg">
+        <picture>
+            <source media="(max-width: 500px)" srcset="/assets/images/jon-portfolio-mobile-background.webp">
+            <source media="(max-width: 1100px)" srcset="/assets/images/jd-hero-background-medium.webp">
+            <img src="assets/images/jd-hero-background.webp" alt="Hero background" class="hero-bg">
+        </picture>
         
         <!-- Logo in top left -->
         <div class="logo-container">
@@ -48,10 +52,10 @@
             <img src="assets/images/cactus-hover.svg" alt="green cactus svg" class="cactus-hover">
         </div>
 
-        <!-- Cloud near top center -->
-        <div class="cloud">
+        <!-- Shrub near bottom right -->
+        <div class="shrub">
             <img src="assets/images" alt="shrub svg" class="shrub-img">
-            <img src="assets/images" alt="" class="shrub-hover">
+            <img src="assets/images" alt="shrub svg" class="shrub-hover">
         </div>
     </main>
 
