@@ -1,17 +1,19 @@
+main {
+    background: linear-gradient(180deg, #a105d8, #ff9416);
+}
+
 main h1 {
-    background: #a105d8;
     color: #ffffff;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
 }
 
 .portfolio-container {
-    background: linear-gradient(180deg, #a105d8, #ff9416);
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    padding: 2rem;
+    padding: 50px;
 }
 
 .portfolio-card {
@@ -19,12 +21,11 @@ main h1 {
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 8px;
     box-shadow: 0 0 10px 10px #ffffff;
-    max-width: 300px;
+    max-width: 400px;
     text-align: center;
-    transition: transform 0.2s ease;
 }
   
 .portfolio-card img {
