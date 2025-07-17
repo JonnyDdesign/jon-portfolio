@@ -1,3 +1,4 @@
+/* Universal */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,4 +13,42 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    color: #ff9416;
+    background-color: #a105d8;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+  
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+  
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 0.5rem;
+    color: #ffffff;
+}
+  
+.breadcrumb a {
+    text-decoration: none;
+    color: #ff9416;
+    transition: color 0.2s;
+}
+  
+.breadcrumb a:hover {
+    color: #ffffff;
 }
