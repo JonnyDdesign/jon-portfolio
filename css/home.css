@@ -1,8 +1,12 @@
+body {
+    background: linear-gradient(180deg, #a105d8, #ff9416);
+}
+
 .hero {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero picture {
