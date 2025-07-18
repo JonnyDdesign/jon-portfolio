@@ -27,15 +27,15 @@ body {
 
 .logo-container {
     position: absolute;
-    top: 15.5%;
-    left: 4.5%;
+    top: 12.5%;
+    left: 8.5%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .logo {
-    width: 200px;
+    width: 180px;
     height: auto;
     cursor: pointer;
     padding-bottom: 2rem;
@@ -172,19 +172,19 @@ body {
 
 @media (max-width: 1900px) {
     .logo {
-        width: 180px;
+        width: 170px;
     }
 }
 
 @media (max-width: 1600px) {
     .logo {
-        width: 170px;
+        width: 150px;
     }
 }
 
 @media (max-width: 1400px) {
     .logo {
-        width: 150px;
+        width: 140px;
     }
 
     .logo-menu li {
