@@ -72,7 +72,6 @@ body {
     gap: 20px;
     list-style: none;
     justify-content: center;
-    font-size: 1.3rem;
     padding: 0;
     margin-top: 1rem;
 }
@@ -149,11 +148,15 @@ body {
     }
 
     .about-text p {
-        margin: 10px;
+        margin: 20px 10px;
     }
 
     .skills-section {
         padding: 20px;
+    }
+
+    .skills-list {
+        gap: 10px;
     }
 
     .skills-list li {

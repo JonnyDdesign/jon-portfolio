@@ -72,3 +72,15 @@ main h1 {
       align-items: center;
     }
 }
+
+@media (max-width: 435px) {
+    main h1 {
+        padding: 20px;
+        font-size: 3.5rem;
+    }
+
+    .portfolio-container {
+        gap: 80px;
+        padding: 40px;
+    }
+}
