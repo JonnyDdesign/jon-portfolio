@@ -39,7 +39,7 @@ main h1 {
 }
 
 .portfolio-card p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #ffffff;
     text-align: left;
 }
@@ -71,6 +71,10 @@ main h1 {
     .portfolio-container {
       flex-direction: column;
       align-items: center;
+    }
+
+    .portfolio-card p {
+        font-size: 1rem;
     }
 }
 
