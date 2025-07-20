@@ -14,7 +14,6 @@ body {
 .contact-section::before {
     content: "";
     position: absolute;
-    inset: 0;
     background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
     z-index: 1;
 }
@@ -22,12 +21,12 @@ body {
 .contact-container {
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
     padding: 2rem;
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     text-align: center;
 }
 
@@ -35,11 +34,13 @@ body {
     font-family: 'Irish Grover', cursive;
     color: #a105d8;
     margin-bottom: 0.5rem;
+    font-size: 3rem;
 }
   
 .contact-container p {
-    color: #333;
+    color: #000000;
     margin-bottom: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .contact-form input,
@@ -47,14 +48,15 @@ body {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #a105d8;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .contact-form button {
   background: #a105d8;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 8px;
