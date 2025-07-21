@@ -153,12 +153,12 @@ body {
     height: auto;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    top: 50%;
-    left: 50%;
+    top: -270%;
+    right: 130%;
     transform: translate(-50%, -50%);
 }
 
-.shrub-hover:hover .shrub-hover {
+.shrub:hover .shrub-hover {
     opacity: 1;
 }
 
