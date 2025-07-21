@@ -99,7 +99,7 @@ body {
 /* Cactus svg and hidden green cactus */
 .cactus {
     position: absolute;
-    bottom: 17%;
+    bottom: 12%;
     left: 47%;
     transform: translateX(-50%);
     width: 20vw;
@@ -132,10 +132,10 @@ body {
 /* Shrub svg and hidden animal */
 .shrub {
     position: absolute;
-    bottom: 17%;
-    left: 47%;
+    bottom: 22%;
+    right: -1%;
     transform: translateX(-50%);
-    width: 20vw;
+    width: 8vw;
     height: auto;
     display: flex;
     align-items: center;
