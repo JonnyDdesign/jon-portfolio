@@ -8,6 +8,7 @@ body {
 }
   
 .sandbox-section h1 {
+    font-family: 'Irish Grover', Times, serif;
     font-size: 3rem;
     margin-bottom: 0.5rem;
     color: #ff9416;
@@ -35,10 +36,6 @@ body {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
-}
-  
-.sandbox-card:hover {
-    transform: translateY(-5px);
 }
   
 .sandbox-card img {

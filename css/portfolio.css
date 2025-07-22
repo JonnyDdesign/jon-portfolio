@@ -33,7 +33,6 @@ main h1 {
 .portfolio-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -68,6 +67,12 @@ main h1 {
 }
   
 /* Responsive styling */
+@media (max-width: 1024px) {
+    .portfolio-container {
+      gap: 100px;
+    }
+}
+
 @media (max-width: 768px) {
     .portfolio-container {
       flex-direction: column;
@@ -81,12 +86,24 @@ main h1 {
 
 @media (max-width: 435px) {
     main h1 {
-        padding: 20px;
+        padding: 30px 20px;
         font-size: 3.5rem;
     }
 
     .portfolio-container {
         gap: 80px;
         padding: 40px;
+    }
+
+    .portfolio-card {
+        padding: 10px;
+    }
+
+    .portfolio-card img {
+        width: 90%;
+    }
+
+    .portfolio-button {
+        margin: 1rem;
     }
 }
