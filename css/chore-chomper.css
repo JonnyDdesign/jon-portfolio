@@ -1,0 +1,153 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #161B33;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.container {
+    background-color: #F1DAC4;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 500px;
+}
+
+h1 {
+    color: #161B33;
+    font-family: 'Eater', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+button {
+    font-family:'Times New Roman', Times, serif;
+    background: #0D0C1D;
+    color: #FFFFFF;
+    padding: 5px 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    position: relative;
+    background: #A69CAC;
+    color: #0D0C1D;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+  
+li button {
+    background: #474973;
+    color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+@keyframes chomp {
+    0% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+    100% {
+        clip-path: inset(0 0 0 100%);
+        opacity: 0;
+    }
+}
+
+.chomped {
+    animation: chomp 1s ease-out forwards;
+}
+
+@keyframes gator-slide {
+    0% {
+        transform: translateX(0) translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(500px) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.gator {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: gator-slide 3s ease forwards;
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.gator-svg {
+    height: 50px;
+    width: 80px;
+}
+
+@keyframes gator-slide {
+    0% {
+        transform: translateX(-100px) translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(500px) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes chomp-upper {
+    0%       { transform: rotate(-30deg); }
+    100%     { transform: rotate(0deg); }
+}
+
+@keyframes chomp-lower {
+    0%       { transform: rotate(30deg); }
+    100%     { transform: rotate(0deg); }
+}
+
+.jaw.upper {
+    transform-origin: 50% 100%;
+    animation: chomp-upper 0.6s ease-out forwards;
+}
+
+.jaw.lower {
+    transform-origin: 50% 0%;
+    animation: chomp-lower 0.6s ease-out forwards;
+}

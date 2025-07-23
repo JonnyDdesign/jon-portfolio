@@ -15,6 +15,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Eater';
+    src: url('/assets/fonts/Eater-Regular.woff2') format('woff2'),
+         url('/assets/fonts/Eater-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Breadcrumb navigation */
 .breadcrumb {
     font-size: 0.9rem;
