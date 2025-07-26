@@ -1,6 +1,6 @@
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background: #ffffff;
+    background: #208AAE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +15,12 @@ body {
 }
   
 h1 {
-    color: #a105d8;
+    color: #000000;
 }
   
 .note-card {
-    background: #fff;
-    border: 3px dashed #ff9416;
+    background: #FFFFFF;
+    border: 3px dashed #0D2149;
     padding: 30px;
     margin: 20px 0;
     border-radius: 15px;
@@ -30,10 +30,14 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+.note-card p {
+    color: #000000;
+}
   
 button {
-    background-color: #ff9416;
-    color: white;
+    background-color: #60492C;
+    color: #FFFFFF;
     border: none;
     padding: 12px 20px;
     font-size: 1rem;
@@ -43,5 +47,5 @@ button {
 }
   
 button:hover {
-    background-color: #e67e22;
+    background-color: #05183D;
 }  
