@@ -1,3 +1,7 @@
+body {
+    background-image: url(/assets/images/26-flavors-background-large.webp);
+}
+
 .logo-series {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
