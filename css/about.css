@@ -22,11 +22,30 @@ body {
     margin-bottom: 60px;
 }
 
+.about-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
 .about-image img {
     width: 400px;
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.resume-link {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: #ff9416;
+    padding: 10px 15px;
+    border-radius: 8px;
 }
 
 .about-text {
@@ -50,6 +69,7 @@ body {
     text-align: left;
     margin-left: 30px;
     padding-right: 2rem;
+    line-height: 1.4;
 }
 
 .skills-section {
@@ -145,6 +165,11 @@ body {
 
     .about-image img {
         width: 250px;
+    }
+
+    .resume-link {
+        font-size: 1.1rem;
+        padding: 8px;
     }
 
     .about-text p {
