@@ -4,9 +4,12 @@ body {
 
 .hero {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    overflow: visible;
+    background-image: url(/assets/images/jd-hero-background.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .hero picture {
@@ -191,6 +194,10 @@ body {
 }
 
 @media (max-width: 1200px) {
+    .hero {
+        background-image: url(/assets/images/jd-hero-background-medium.webp);
+    }
+
     .logo {
         width: 140px;
     }
@@ -253,12 +260,7 @@ body {
 
 @media (max-width: 500px) {
     .hero {
-      background-image: url(assets/images/jon-portfolio-mobile-background.webp);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100vw;
-      height: 100vh;
+      background-image: url(/assets/images/jon-portfolio-mobile-background.webp);
     }
 
     .cloud {
