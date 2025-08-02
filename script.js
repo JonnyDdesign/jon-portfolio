@@ -134,3 +134,23 @@ if (document.getElementById("generateBtn")) {
 }
 
 // === 26 FLAVORS OF LOGOS LOGIC ===
+document.addEventListener('DOMContentLoaded', function () {
+    const likeSections = document.querySelectorAll('.like-section');
+
+    likeSections.forEach(section => {
+        const button = section.querySelector('.like-btn');
+        const countSpan = section.querySelector('.like-count');
+        const letter = section.getAttribute('data-letter');
+        const storageKey = `likes_${letter}`;
+
+        // Load from localStorage
+        let count = parseInt(localStorage.getItem(storageKey)) || 0;
+        countSpan.textContent = count;
+
+        button.addEventListener('click', () => {
+            count++;
+            localStorage.setItem(storageKey, count);
+            countSpan.textContent = count;
+        });
+    });
+});
