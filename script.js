@@ -132,3 +132,5 @@ if (document.getElementById("generateBtn")) {
         noteText.textContent = notes[randomIndex];
     });
 }
+
+// === 26 FLAVORS OF LOGOS LOGIC ===

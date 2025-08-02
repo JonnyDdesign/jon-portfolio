@@ -3,36 +3,52 @@ body {
 }
 
 .logo-series {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
   
-  .logo-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 1.5rem;
-    transition: transform 0.2s;
-  }
+.logo-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
   
-  .logo-card img {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
+.logo-card img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
   
-  .logo-card h2 {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #333;
-  }
+.logo-card h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
   
-  .logo-card p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-  }
-  
+.logo-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.like-section {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
