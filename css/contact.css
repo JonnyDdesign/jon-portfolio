@@ -3,7 +3,6 @@ body {
 }
 
 .contact-section {
-    background: url('../assets/images/az-cactus-sunset.webp') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
