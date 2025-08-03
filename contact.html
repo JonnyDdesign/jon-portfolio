@@ -42,10 +42,16 @@
         <div class="contact-container">
             <h1>Let's Work Together</h1>
             <p>Thinking about a project? I'd love to hear from you!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+            <form class="contact-form" action="https://formsubmit.co/jon@jonnyddesign.com" method="POST">
+                <!-- Hidden fields for spam protection and redirect -->
+                <input type="hidden" name="_next" value="https://jonnyddesign.com/thank-you.html">
+                <input type="text" name="_honey" style="display: none">
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Visible fields -->
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name= "message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
