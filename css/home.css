@@ -2,48 +2,110 @@ body {
     background: linear-gradient(180deg, #a105d8, #ff9416);
 }
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(/assets/images/jd-hero-background.webp);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+/* --- GLOBAL COORD SYSTEM VARS --- */
+:root{
+    /* Background intrinsic size */
+    --bg-w: 1920;
+    --bg-h: 1080;
+
+    /* Set your measured pixel coordinates here (FROM the 1920x1080 image) */
+    --logo-x: 160;   --logo-y: 114;
+    --cloud-x: 960;  --cloud-y: 170;
+    --cactus-x: 480; --cactus-y: 860;
+    --shrub-x: 1650; --shrub-y: 860;
+
+    /* Overlay widths as % of image width */
+    --logo-w: 12%;
+    --cloud-w: 18%;
+    --cactus-w: 12%;
+    --shrub-w: 9%;
 }
 
-.logo-container {
+/* --- HERO LAYOUT --- */
+.hero {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Aspect-ratio box that EXACTLY matches the image (16:9),
+   scaled to the largest size that fits the viewport */
+.hero-stage {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: min(100vw, calc(100vh * 16 / 9)); /* biggest width that still fits */
+    height: auto; /* derived from aspect-ratio */
+    isolation: isolate; /* clean z-index stacking */
+}
+
+.hero-bg {
     position: absolute;
-    top: 12.5%;
-    left: 8.5%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* same aspect ratio, so fill is OK */
+    pointer-events: none; /* let overlays receive hover */
+    z-index: 0;
+}
+
+/* --- OVERLAYS (locked to the image) --- */
+.overlay {
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%); /* anchor overlays by their center */
+    pointer-events: auto;
+}
+
+/* Convert px coords -> % of the image, via CSS calc
+   left%  = x * 100% / 1920
+   top%   = y * 100% / 1080
+*/
+.logo-container {
+    left: calc(var(--logo-x) * 100% / var(--bg-w));
+    top:  calc(var(--logo-y) * 100% / var(--bg-h));
+    width: var(--logo-w);
+    transform: translate(-10%, -10%); /* offset anchor to feel more "top-left" */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: .5rem;
 }
 
 .logo {
-    width: 180px;
+    width: 100%;
     height: auto;
     cursor: pointer;
-    padding-bottom: 2rem;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.35));
 }
 
+/* Menu (desktop hover) */
 .logo-menu {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    padding: 10px;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
     list-style: none;
-    z-index: 10;
-    box-shadow: 0 0 20px rgba(249, 247, 247, 0.9);
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s step-end;   
+}
+
+.logo-container:hover .logo-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .logo-menu li {
     font-size: 3rem;
-    margin: 20px 10px;
+    margin: 0.25rem 0;
 }
 
-.logo-menu li a {
+.logo-menu a {
     font-family: 'Irish Grover', Times, serif;
     text-decoration: none;
     color: #FFFFFF;
@@ -51,99 +113,78 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Cloud svg and hidden lightning bolt */
+/* --- Cloud svg and hidden lightning bolt --- */
 .cloud {
-    position: absolute;
-    top: 3%;
-    left: 40%;
-    transform: translateX(-50%);
-    width: 20vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: calc(var(--cloud-x) * 100% / var(--bg-w));
+    top:  calc(var(--cloud-y) * 100% / var(--bg-h));
+    width: var(--cloud-w);
 }
 
 .cloud-img {
-    width: 90%;
+    width: 100%;
     height: auto;
+    display: block;
 }
 
-.lightning-bolt {
+.cloud-hover {
     position: absolute;
-    width: 12vw;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    top: 90%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    top: 105%; /* just beneath the cloud */
+    transform: translate(-50%, 0);
+    width: 55%;
+    opacity: 0;
+    transition: opacity .25s ease;
 }
-
-.cloud:hover .lightning-bolt {
+.cloud:hover .cloud-hover {
     opacity: 1;
 }
 
-/* Cactus svg and hidden green cactus */
+/* --- Cactus svg and hidden green cactus --- */
 .cactus {
-    position: absolute;
-    bottom: 12%;
-    left: 47%;
-    transform: translateX(-50%);
-    width: 20vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: calc(var(--cactus-x) * 100% / var(--bg-w));
+    top:  calc(var(--cactus-y) * 100% / var(--bg-h));
+    width: var(--cactus-w);
 }
 
 .cactus-img {
-    width: 90%;
+    width: 100%;
     height: auto;
+    display: block;
 }
 
 .cactus-hover {
     position: absolute;
-    width: 90%;
-    height: auto;
+    inset: 0;          /* overlay exactly on top of cactus */
+    width: 100%;
+    height: 100%;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: opacity .25s ease;
 }
 
 .cactus:hover .cactus-hover {
     opacity: 1;
 }
 
-/* Shrub svg and hidden animal */
+/* --- Shrub svg and hidden animal --- */
 .shrub {
-    position: absolute;
-    bottom: 22%;
-    right: -1%;
-    transform: translateX(-50%);
-    width: 8vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: calc(var(--shrub-x) * 100% / var(--bg-w));
+    top:  calc(var(--shrub-y) * 100% / var(--bg-h));
+    width: var(--shrub-w);
 }
 
 .shrub-img {
-    width: 90%;
+    width: 100%;
     height: auto;
+    display: block;
 }
 
 .shrub-hover {
     position: absolute;
-    width: 90%;
-    height: auto;
+    bottom: 115%;
+    right: -140%;
+    width: 190%;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    top: -270%;
-    right: 130%;
-    transform: translate(-50%, -50%);
+    transition: opacity .25s ease;
 }
 
 .shrub:hover .shrub-hover {
@@ -157,188 +198,39 @@ body {
         display: block;
     }
 
-    .logo-menu li a:hover {
+    .logo-menu a:hover {
         color: #a105d8;
     }
 }
 
-@media (max-width: 1900px) {
-    .logo {
-        width: 170px;
-    }
-}
+@media (max-width: 500px){
+    /* Keep image visible but simplify interactions */
+    .overlay:not(.logo-container){ display: none; }
 
-@media (max-width: 1600px) {
-    .logo {
-        width: 150px;
-    }
-}
+    .hero-stage{ width: 100vw; } /* fill width; height via aspect-ratio */
 
-@media (max-width: 1400px) {
-    .logo {
-        width: 140px;
-    }
-
-    .logo-menu li {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 1200px) {
-    .hero {
-        background-image: url(/assets/images/jd-hero-background-medium.webp);
-    }
-
-    .logo {
-        width: 140px;
-    }
-
-    .logo-menu li {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 1050px) {
-    .hero-bg {
-        height: 80%;
-    }
-
-    .logo-container {
-        top: 12%;
-        left: 1%;
-    }
-
-    .logo {
-        width: 110px;
-    }
-
-    .cloud {
-        top: -2vh;
-    }
-}
-
-@media (max-width: 800px) {
-    .hero-bg {
-        height: 70%;
-    }
-
-    .logo-container {
-        top: 9%;
-        left: 1%;
-    }
-
-    .logo {
-        width: 100px;
-    }
-}
-
-@media (max-width: 675px) {
-    .logo-container {
-        top: 7%;
-        left: 8%;
-    }
-}
-
-@media (max-width: 600px) {
-    .logo-container {
-        top: 6%;
-    }
-
-    .logo {
-        width: 80px;
-    }
-}
-
-@media (max-width: 500px) {
-    .hero {
-        background-image: url(/assets/images/jon-portfolio-mobile-background.webp);
-    }
-
-    .cloud {
-        display: none;
-    }
-
-    .cactus {
-        display: none;
-    }
-
-    .shrub {
-        display: none;
-    }
-
-    .logo-container {
-        top: 9%;
-        left: 23%;
+    .logo-container{
+        /* move logo/menu to center top for mobile */
+        left: 50%;
+        top: 10%;
+        width: 28%;
+        transform: translate(-50%, -50%);
         align-items: center;
     }
 
-    .logo {
-        width: 110px;
+    .logo-menu{
+        /* show simple stacked menu on mobile */
+        opacity: 1; visibility: visible; transform: none;
+        background: transparent; box-shadow: none; padding: 0; margin-top: .5rem;
+        display: flex; flex-direction: column; gap: .5rem;
     }
 
-    .logo-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        background-color: transparent;
-        box-shadow: none;
-        align-items: center;
-        padding-top: 20px;
-    }
-    
-    .logo-menu li {
-        margin: 0;
-        font-size: 1rem;
-        width: 100%;
-    }
-    
-    .logo-menu li a {
+    .logo-menu a{
         display: block;
-        width: 100%;
-        padding: 15px 25px;
-        background-color: rgba(0, 0, 0, 0.6);
-        color: #ffffff;
+        padding: .6rem .9rem;
+        background: rgba(0,0,0,.6);
         border-radius: 8px;
-        font-size: 2.5rem;
-        font-weight: bold;
         text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-container {
-        left: 21%;
-    }
-}
-
-@media (max-width: 460px) {
-    .logo-container {
-        left: 20%;
-    }
-}
-
-@media (max-width: 435px) {
-    .logo-container {
-        left: 19%;
-    }
-}
-
-@media (max-width: 410px) {
-    .logo-container {
-        left: 18%;
-    }
-}
-
-@media (max-width: 400px) {
-    .logo-container {
-        left: 16%;
-    }
-}
-
-@media (max-width: 370px) {
-    .logo-container {
-        left: 14%;
+        font-size: clamp(18px, 6vw, 28px);
     }
 }
