@@ -32,8 +32,14 @@
 <body>
 
     <main class="hero">
-        <!-- Background image -->
-        <img src="/assets/images/jd-hero-background.webp" alt="Desert background" class="hero-bg">
+        <!-- Responsive background image -->
+        <picture class="hero-bg">
+            <!-- Smaller screens (mobile first) -->
+            <source srcset="/assets/images/jd-hero-background-medium" media="(max-width: 600px)">
+            <source srcset="/assets/images/jon-portfolio-mobile-background" media="(max-width: 1200px)">
+            <!-- Default / large -->
+            <img src="/assets/images/jd-hero-background.webp" alt="Desert background">
+        </picture>
         
         <!-- Navigation / Logo -->
         <nav class="logo-container">

@@ -25,11 +25,11 @@
 /* Navigation / Logo */
 .logo-container {
     position: absolute;
-    left: 9%;
+    left: 6%;
     top:  16%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     z-index: 2;
 }
 
@@ -49,7 +49,8 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s step-end;   
+    transition: opacity 0.2s ease, visibility 0.2s step-end;
+    text-align: center;
 }
 
 .logo-container:hover .logo-menu {
@@ -59,7 +60,7 @@
 
 .logo-menu li {
     font-size: 3rem;
-    margin: 0.25rem 0;
+    margin: 1rem 0;
 }
 
 .logo-menu a {
