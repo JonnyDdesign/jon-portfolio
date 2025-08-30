@@ -13,8 +13,8 @@
 /* Navigation / Logo */
 .logo-container {
     position: absolute;
-    left: 6%;
-    top:  16%;
+    left: 7%;
+    top: 12%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,7 @@
 /* --- CLOUD --- */
 .cloud {
     position: absolute;
-    left: 30%;
+    left: 33%;
     top:  0;
     width: 20%;
 }
@@ -90,8 +90,8 @@
 /* --- CACTUS --- */
 .cactus {
     position: absolute;
-    left: 40%;
-    bottom: 10%;
+    left: 36%;
+    bottom: 27%;
     width: 20%;
 }
 
@@ -118,8 +118,8 @@
 .shrub {
     position: absolute;
     right: -5%;
-    bottom: 26%;
-    width: 20%;
+    bottom: 39%;
+    width: 15%;
 }
 
 .shrub-img {
@@ -130,8 +130,8 @@
 
 .shrub-hover {
     position: absolute;
-    bottom: 275%;
-    right: 108%;
+    bottom: 300%;
+    right: 150%;
     width: 40%;
     opacity: 0;
     transition: opacity .25s ease;
