@@ -4,22 +4,10 @@
 
 /* HERO */
 .hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Background image */
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    pointer-events: none;
-    z-index: 0;
+    min-height: 100vh;
+    background-image: url('/assets/images/jd-hero-background.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Navigation / Logo */
@@ -105,7 +93,6 @@
     left: 40%;
     bottom: 10%;
     width: 20%;
-    z-index: 1;
 }
 
 .cactus-img {
@@ -133,7 +120,6 @@
     right: -5%;
     bottom: 26%;
     width: 20%;
-    z-index: 1;
 }
 
 .shrub-img {
@@ -167,13 +153,21 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .hero {
+        background-image: url('/assets/images/jd-hero-background-medium.webp');
+    }
+}
+
 @media (max-width: 500px) {
     .overlay:not(.logo-container) {
         display: none;
     }
 
-    .hero-stage {
-        width: 100vw;
+    .hero {
+        background-image: url('/assets/images/jd-hero-background-mobile.webp');
+        background-size: contain;
+        background-position: center;
     }
 
     .logo-container {
