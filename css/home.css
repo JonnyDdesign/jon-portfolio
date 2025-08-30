@@ -160,22 +160,22 @@
 }
 
 @media (max-width: 500px) {
-    .overlay:not(.logo-container) {
-        display: none;
-    }
-
     .hero {
         background-image: url('/assets/images/jd-hero-background-mobile.webp');
-        background-size: contain;
+        background-size: cover;
         background-position: center;
     }
 
     .logo-container {
         left: 50%;
-        top: 10%;
-        width: 28%;
+        top: 47%;
+        width: 100%;
         transform: translate(-50%, -50%);
         align-items: center;
+    }
+
+    .logo {
+        width: 88px;
     }
 
     .logo-menu {
@@ -197,6 +197,18 @@
         background: rgba(0,0,0,0.6);
         border-radius: 8px;
         text-align: center;
-        font-size: clamp(18px, 6vw, 28px);
+        font-size: 2rem;
+    }
+
+    .cloud {
+        display: none;
+    }
+
+    .cactus {
+        display: none;
+    }
+
+    .shrub {
+        display: none;
     }
 }
