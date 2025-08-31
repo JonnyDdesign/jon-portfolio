@@ -168,7 +168,7 @@
 
     .logo-container {
         left: 50%;
-        top: 47%;
+        top: 49%;
         width: 100%;
         transform: translate(-50%, -50%);
         align-items: center;
@@ -185,7 +185,7 @@
         background: transparent;
         box-shadow: none;
         padding: 0;
-        margin-top: 0.5rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
