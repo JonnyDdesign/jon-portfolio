@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 2;
+    gap: 20px;
 }
 
 .logo {
@@ -44,11 +45,11 @@
 }
 
 .logo-menu li {
-    font-size: 3rem;
     margin: 1rem 0;
 }
 
 .logo-menu a {
+    font-size: 3rem;
     font-family: 'Irish Grover', Times, serif;
     text-decoration: none;
     color: #FFFFFF;
@@ -60,8 +61,8 @@
 .cloud {
     position: absolute;
     left: 33%;
-    top:  0;
-    width: 20%;
+    top: 0;
+    width: 18%;
 }
 
 .cloud-img {
@@ -87,8 +88,8 @@
 /* --- CACTUS --- */
 .cactus {
     position: absolute;
-    left: 36%;
-    bottom: 27%;
+    left: 37%;
+    bottom: 25%;
     width: 20%;
 }
 
@@ -115,7 +116,7 @@
 .shrub {
     position: absolute;
     right: -5%;
-    bottom: 39%;
+    bottom: 37%;
     width: 15%;
 }
 
@@ -179,12 +180,15 @@
 
 @media (max-width: 1300px) {
     .logo-container {
-        left: 5%;
         top: 14%;
     }
 
     .logo {
         width: 100px;
+    }
+
+    .logo-menu a {
+        font-size: 2.5rem;
     }
 }
 
@@ -194,7 +198,6 @@
     }
 
     .logo-container {
-        left: 4%;
         top: 13%;
     }
 
@@ -205,7 +208,7 @@
 
 @media (max-width: 1100px) {
     .logo-container {
-        left: 3%;
+        left: 5%;
         top: 14%;
     }
 
@@ -215,56 +218,94 @@
 }
 
 @media (max-width: 1000px) {
-    .logo-container {
-        left: 2%;
-    }
-
     .logo {
         width: 75px;
+    }
+
+    .logo-menu a {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 900px) {
     .logo-container {
-        left: 1%;
         top: 12%;
     }
 
     .logo {
         width: 70px;
     }
+
+    .cactus {
+        bottom: 32%;
+    }
+
+    .shrub {
+        bottom: 44%;
+    }
 }
 
 @media (max-width: 800px) {
     .logo-container {
-        left: -1%;
+        left: 4%;
         top: 10%;
     }
 
     .logo {
         width: 65px;
     }
+
+    .logo-menu a {
+        font-size: 1.7rem;
+    }
+
+    .cactus {
+        bottom: 40%;
+    }
+
+    .shrub {
+        bottom: 50%;
+    }
 }
 
 @media (max-width: 700px) {
     .logo-container {
-        left: -3%;
         top: 9%;
     }
 
     .logo {
         width: 55px;
     }
+
+    .cactus {
+        bottom: 48%;
+    }
+
+    .shrub {
+        bottom: 57%;
+    }
 }
 
 @media (max-width: 600px) {
     .logo-container {
-        left: -6%;
+        left: 3%;
         top: 8%;
     }
 
     .logo {
         width: 50px;
+    }
+
+    .logo-menu a {
+        font-size: 1.3rem;
+    }
+
+    .cactus {
+        bottom: 55%;
+    }
+
+    .shrub {
+        bottom: 63%;
     }
 }
 
@@ -277,7 +318,7 @@
 
     .logo-container {
         left: 49%;
-        top: 44%;
+        top: 45%;
         width: 100%;
         transform: translate(-50%, -50%);
         align-items: center;
@@ -285,6 +326,7 @@
 
     .logo {
         width: 95px;
+        cursor: inherit;
     }
 
     .logo-menu {
@@ -307,6 +349,7 @@
         border-radius: 8px;
         text-align: center;
         font-size: 2rem;
+        letter-spacing: 2.5px;
     }
 
     .cloud {
@@ -332,6 +375,12 @@
     }
 }
 
+@media (max-width: 460px) {
+    .logo-container {
+        top: 49%;
+    }
+}
+
 @media (max-width: 445px) {
     .logo-container {
         top: 49%;
@@ -342,9 +391,15 @@
     }
 }
 
+@media (max-width: 435px) {
+    .logo-container {
+        top: 50%;
+    }
+}
+
 @media (max-width: 420px) {
     .logo-container {
-        top: 51%;
+        top: 52%;
     }
 
     .logo {
