@@ -2,8 +2,8 @@
 .hero {
     height: 100vh;
     background-image: url('/assets/images/jd-hero-background.webp');
-    background-size: contain;
-    background-position: top;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
@@ -89,7 +89,7 @@
 .cactus {
     position: absolute;
     left: 37%;
-    bottom: 25%;
+    bottom: 14%;
     width: 20%;
 }
 
@@ -116,7 +116,7 @@
 .shrub {
     position: absolute;
     right: -5%;
-    bottom: 37%;
+    bottom: 28%;
     width: 15%;
 }
 
@@ -128,8 +128,8 @@
 
 .shrub-hover {
     position: absolute;
-    bottom: 300%;
-    right: 150%;
+    bottom: 320%;
+    right: 120%;
     width: 40%;
     opacity: 0;
     transition: opacity .25s ease;
@@ -153,7 +153,7 @@
 
 @media (max-width: 1800px) {
     .logo-container {
-        left: 7%;
+        left: 3%;
     }
 
     .logo {
@@ -163,8 +163,8 @@
 
 @media (max-width: 1600px) {
     .logo-container {
-        left: 6%;
-        top: 13%;
+        left: 2%;
+        top: 15%;
     }
 
     .logo {
