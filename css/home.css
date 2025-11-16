@@ -23,27 +23,27 @@
 }
 
 .hero-header h1 {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 3.5rem;
     letter-spacing: 2px;
 }
 
 .hero-header h2 {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 3rem;
     letter-spacing: 2px;
 }
 
 .hero-header p {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 1.2rem;
     margin-top: 0.3rem;
 }
 
 .side-nav {
     position: absolute;
-    left: 10rem;
-    top: 25%;
+    left: 8rem;
+    top: 20%;
     display: flex;
     flex-direction: column;
     gap: 8rem;
@@ -51,28 +51,25 @@
 }
 
 .nav-btn {
-    display: inline-block;
-    padding: 0.75rem 1.8rem;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.18);
-    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    background: var(--cactus-red);
+    color: #FFFFFF;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     backdrop-filter: blur(4px);
     transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.4);
+    border: 2px solid var(--yellow-flower);
 }
 
 .nav-btn:hover {
     background: rgba(255,255,255,0.3);
     transform: translateX(6px);
 }
-
-.btn-1 { margin-left: 0px; }
-.btn-2 { margin-left: 12px; }
-.btn-3 { margin-left: 24px; }
-.btn-4 { margin-left: 8px; }
 
 /* Responsive styling */
 @media (max-width: 768px) {

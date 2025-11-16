@@ -5,6 +5,16 @@
     padding: 0;
 }
 
+/* Color Palaette */
+:root {
+    --yellow-flower: #F2D44A;
+    --cactus-red: #E61212;
+    --cactus-green: #2D4330;
+    --charcoal: #0E0C07;
+    --warm-grey: #928C85;
+    --stone-grey: #656462;
+}
+
 /* Locally hosted fonts */
 @font-face {
     font-family: 'Irish Grover';
