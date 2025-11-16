@@ -12,54 +12,57 @@
 
 .hero-header {
     position: absolute;
-    top: 3rem;
-    right: 3rem;
+    top: clamp(1rem, 4vh, 3rem);
+    right: clamp(1rem, 4vw, 3rem);
     text-align: center;
     z-index: 2;
     background: rgba(0, 0, 0, 0.7);
-    padding: 2rem 4rem;
-    border-radius: 8px;
+    padding: clamp(1rem, 4vh, 2.5rem) clamp(1rem, 5vw, 4rem);
+    border-radius: 50px;
     backdrop-filter: blur(5px);
+    max-width: min(90%, 1000px);
 }
 
 .hero-header h1 {
     color: #FFFFFF;
-    font-size: 3.5rem;
+    font-size: clamp(1.8rem, 4vw, 3.8rem);
     letter-spacing: 2px;
 }
 
 .hero-header h2 {
     color: #FFFFFF;
-    font-size: 3rem;
+    font-size: clamp(1.3rem, 3vw, 2.8rem);
     letter-spacing: 2px;
 }
 
 .hero-header p {
     color: #FFFFFF;
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
     margin-top: 0.3rem;
 }
 
 .side-nav {
-    position: absolute;
-    left: 8rem;
-    top: 20%;
+    position: fixed;
+    left: clamp(1rem, 4vw, 4rem);
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: clamp(1rem, 10vh, 8rem);
     z-index: 2;
 }
 
 .nav-btn {
+    font-family: 'Irish Grover';
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2.5rem;
+    font-size: clamp(0.9rem, 3vw, 4rem);
+    padding: clamp(0.4rem, 2vh, 1.2rem) clamp(0.6rem, 3vw, 2rem);
     border-radius: 50px;
     background: var(--cactus-red);
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 3rem;
     font-weight: bold;
     backdrop-filter: blur(4px);
     transition: all 0.3s ease;
@@ -81,18 +84,4 @@
     .hero-header h1 {
         font-size: 2.4rem;
     }
-
-    .side-nav {
-        left: 1.5rem;
-        top: 45%;
-    }
-
-    .nav-btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-}
-
-@media (max-width: 435px) {
-
 }
