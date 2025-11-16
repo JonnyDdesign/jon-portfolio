@@ -1,408 +1,113 @@
 /* HERO */
 .hero {
+    position: relative;
     height: 100vh;
-    background-image: url('/assets/images/jd-hero-background.webp');
+    background-image: url('/assets/images/hero-background-1920.webp');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
+    padding: 3rem;
+    overflow: hidden;
 }
 
-/* Navigation / Logo */
-.logo-container {
+.hero-header {
     position: absolute;
-    left: 8%;
-    top: 13%;
+    top: 3rem;
+    right: 3rem;
+    text-align: right;
+    z-index: 2;
+}
+
+.hero-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    opacity: 0.9;
+}
+
+.side-nav {
+    position: absolute;
+    left: 3rem;
+    top: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
     z-index: 2;
-    gap: 20px;
 }
 
-.logo {
-    width: 160px;
-    height: auto;
-    cursor: pointer;
-}
-
-/* Menu (desktop hover) */
-.logo-menu {
-    margin: 0;
-    padding: 0.5rem 0.75rem;
-    list-style: none;
-    background: rgba(0,0,0,0.8);
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s step-end;
-    text-align: center;
-}
-
-.logo-container:hover .logo-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-.logo-menu li {
-    margin: 1rem 0;
-}
-
-.logo-menu a {
-    font-size: 3rem;
-    font-family: 'Irish Grover', Times, serif;
+.nav-btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
     text-decoration: none;
-    color: #FFFFFF;
     font-weight: bold;
-    transition: color 0.3s ease;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.4);
 }
 
-/* --- CLOUD --- */
-.cloud {
-    position: absolute;
-    left: 33%;
-    top: 0;
-    width: 18%;
+.nav-btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateX(6px);
 }
 
-.cloud-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.cloud-hover {
-    position: absolute;
-    left: 45%;
-    top: 60%;
-    width: 70%;
-    opacity: 0;
-    transform: translate(-50%, 0);
-    transition: opacity 0.25s ease;
-}
-
-.cloud:hover .cloud-hover {
-    opacity: 1;
-}
-
-/* --- CACTUS --- */
-.cactus {
-    position: absolute;
-    left: 37%;
-    bottom: 14%;
-    width: 20%;
-}
-
-.cactus-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.cactus-hover {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity .25s ease;
-}
-
-.cactus:hover .cactus-hover {
-    opacity: 1;
-}
-
-/* --- SHRUB --- */
-.shrub {
-    position: absolute;
-    right: -5%;
-    bottom: 28%;
-    width: 15%;
-}
-
-.shrub-img {
-    width: 50%;
-    height: auto;
-    display: block;
-}
-
-.shrub-hover {
-    position: absolute;
-    bottom: 320%;
-    right: 120%;
-    width: 40%;
-    opacity: 0;
-    transition: opacity .25s ease;
-}
-
-.shrub:hover .shrub-hover {
-    opacity: 1;
-}
+.btn-1 { margin-left: 0px; }
+.btn-2 { margin-left: 12px; }
+.btn-3 { margin-left: 24px; }
+.btn-4 { margin-left: 8px; }
 
 /* Responsive styling */
-@media (min-width: 501px) {
-    .logo-container:hover .logo-menu,
-    .logo-menu:hover {
-        display: block;
+@media (max-width: 768px) {
+    .hero-header {
+        right: 1.5rem;
+        top: 2rem;
     }
 
-    .logo-menu a:hover {
-        color: #a105d8;
-    }
-}
-
-@media (max-width: 1800px) {
-    .logo-container {
-        left: 3%;
+    .hero-header h1 {
+        font-size: 2.4rem;
     }
 
-    .logo {
-        width: 150px;
-    }
-}
-
-@media (max-width: 1600px) {
-    .logo-container {
-        left: 2%;
-        top: 15%;
+    .side-nav {
+        left: 1.5rem;
+        top: 45%;
     }
 
-    .logo {
-        width: 130px;
+    .nav-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
     }
 }
 
 @media (max-width: 1440px) {
-    .logo {
-        width: 110px;
-    }
+
 }
 
 @media (max-width: 1300px) {
-    .logo-container {
-        top: 14%;
-    }
 
-    .logo {
-        width: 100px;
-    }
-
-    .logo-menu a {
-        font-size: 2.5rem;
-    }
 }
 
 @media (max-width: 1200px) {
-    .hero {
-        background-image: url('/assets/images/jd-hero-background-medium.webp');
-    }
 
-    .logo-container {
-        top: 13%;
-    }
-
-    .logo {
-        width: 90px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .logo-container {
-        left: 5%;
-        top: 14%;
-    }
-
-    .logo {
-        width: 80px;
-    }
 }
 
 @media (max-width: 1000px) {
-    .logo {
-        width: 75px;
-    }
 
-    .logo-menu a {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .logo-container {
-        top: 12%;
-    }
-
-    .logo {
-        width: 70px;
-    }
-
-    .cactus {
-        bottom: 32%;
-    }
-
-    .shrub {
-        bottom: 44%;
-    }
 }
 
 @media (max-width: 800px) {
-    .logo-container {
-        left: 4%;
-        top: 10%;
-    }
 
-    .logo {
-        width: 65px;
-    }
-
-    .logo-menu a {
-        font-size: 1.7rem;
-    }
-
-    .cactus {
-        bottom: 40%;
-    }
-
-    .shrub {
-        bottom: 50%;
-    }
 }
 
 @media (max-width: 700px) {
-    .logo-container {
-        top: 9%;
-    }
 
-    .logo {
-        width: 55px;
-    }
-
-    .cactus {
-        bottom: 48%;
-    }
-
-    .shrub {
-        bottom: 57%;
-    }
-}
-
-@media (max-width: 600px) {
-    .logo-container {
-        left: 3%;
-        top: 8%;
-    }
-
-    .logo {
-        width: 50px;
-    }
-
-    .logo-menu a {
-        font-size: 1.3rem;
-    }
-
-    .cactus {
-        bottom: 55%;
-    }
-
-    .shrub {
-        bottom: 63%;
-    }
-}
-
-@media (max-width: 500px) {
-    .hero {
-        background-image: url('/assets/images/jd-hero-background-mobile.webp');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .logo-container {
-        left: 49%;
-        top: 45%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        align-items: center;
-    }
-
-    .logo {
-        width: 95px;
-        cursor: inherit;
-    }
-
-    .logo-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .logo-menu a {
-        display: block;
-        padding: 0.6rem 0.9rem;
-        background: rgba(0,0,0,0.6);
-        border-radius: 8px;
-        text-align: center;
-        font-size: 2rem;
-        letter-spacing: 2.5px;
-    }
-
-    .cloud {
-        display: none;
-    }
-
-    .cactus {
-        display: none;
-    }
-
-    .shrub {
-        display: none;
-    }
-}
-
-@media (max-width: 475px) {
-    .logo-container {
-        top: 47%;
-    }
-
-    .logo {
-        width: 90px;
-    }
-}
-
-@media (max-width: 460px) {
-    .logo-container {
-        top: 49%;
-    }
-}
-
-@media (max-width: 445px) {
-    .logo-container {
-        top: 49%;
-    }
-
-    .logo {
-        width: 90px;
-    }
 }
 
 @media (max-width: 435px) {
-    .logo-container {
-        top: 50%;
-    }
-}
 
-@media (max-width: 420px) {
-    .logo-container {
-        top: 52%;
-    }
-
-    .logo {
-        width: 85px;
-    }
 }
