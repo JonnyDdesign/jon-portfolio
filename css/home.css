@@ -76,12 +76,39 @@
 
 /* Responsive styling */
 @media (max-width: 768px) {
-    .hero-header {
-        right: 1.5rem;
-        top: 2rem;
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 2rem;
     }
 
-    .hero-header h1 {
-        font-size: 2.4rem;
+    .hero-header {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1.5rem;
+        max-width: 75%;
+        text-align: center;
+        padding: clamp(1rem, 3vh, 2rem);
+    }
+
+    .side-nav {
+        position: relative;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: clamp(1rem, 8vh, 4rem);
+        align-items: center;
+    }
+
+    .nav-btn {
+        width: 80%;
+        max-width: 250px;
+        font-size: clamp(1rem, 3vw, 2rem);
+        padding: clamp(0.6rem, 2vh, 1rem) clamp(1rem, 4vw, 2rem);
     }
 }
