@@ -38,27 +38,34 @@
         </ul>
     </nav>
 
-    <main class="about-section">
-        <div class="about-container">
+    <main class="about-hero">
+        <section class="about-container">
+            <div class="about-image-box">
+                <picture>
+                    <source srcset="/assets/images/me-250.webp" media="(max-width: 480px)">
+                    <source srcset="/assets/images/me-350.webp" media="(max-width: 1024px)">
+                    <source srcset="/assets/images/me-400.webp" media="(min-width: 1025px)">
+                    <img src="/assets/images/me-400.webp" alt="Portrait of Jon Desserres" width="400" height="300">
+                </picture>
+                <a href="/assets/jon-desserres-resume.pdf" target="_blank" class="resume-link">View My Resume</a>
+            </div>
+            <div class="about-text-box">
+                <h1>About Me</h1>
+                <p>After working as a special education teacher for five years and commercial real estate appraiser for nearly six years, I’ve decided to take the leap and pursue a career in web development.</p>
+                <p>My journey in web development began on Codecademy, and my knowledge continues to expand every day. My portfolio site was designed with an Arizona theme. The color scheme represents a serene Arizona desert sunset, and also represents the colors of my favorite basketball team, the Phoenix Suns! This site was entirely hand-coded via HTML, CSS, and vanilla JavaScript.</p>
+                <p>I love to learn new technologies and solve problems to create amazing projects. I'm open to career opportunities where I can contribute, learn, and grow. If you have an opportunity that matches my skills and experience, please reach out and contact me.</p>
+            </div>
+        </section>
+
+    </main>
+
+        <!--<div class="about-container">
             <div class="about-main">
-                <div class="about-image">
-                    <picture>
-                        <source srcset="/assets/images/me-250.webp" media="(max-width: 480px)">
-                        <source srcset="/assets/images/me-350.webp" media="(max-width: 1024px)">
-                        <source srcset="/assets/images/me-400.webp" media="(min-width: 1025px)">
-                        <img src="/assets/images/me-400.webp"
-                            alt="Portrait of Jon Desserres" 
-                            width="400" height="300">
-                        </picture>
-                    <a href="/assets/jon-desserres-resume.pdf" target="_blank" class="resume-link">View My Resume</a>
+                    
                 </div>
                 <div class="about-text">
                     <h1>About Me</h1>
-                    <p>After working as a special education teacher for five years and commercial real estate appraiser for nearly six years, I’ve decided to take the leap and pursue a career in web development.</p>
-                    <p>My journey in web development began on Codecademy, and my knowledge continues to expand every day. My portfolio site was designed with an Arizona theme. The color scheme represents a serene Arizona desert sunset, and also represents the colors of my favorite basketball team, the Phoenix Suns! This site was entirely hand-coded via HTML, CSS, and vanilla JavaScript.</p>
-                    <p>I love to learn new technologies and solve problems to create amazing projects. I'm open to career opportunities where I can contribute, learn, and grow. If you have an opportunity that matches my skills and experience, please reach out and contact me.</p>
-                </div>
-            </div>
+                    <p></p>
 
             <div class="skills-section">
                 <h2>Skills</h2>
@@ -76,9 +83,7 @@
                     <li>SVG Animation</li>
                     <li>Figma / Canva</li>
                 </ul>
-            </div>
-        </div>
-    </main>
+    </main>-->
     
 </body>
 </html>
