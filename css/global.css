@@ -34,7 +34,7 @@
     font-display: swap;
 }
 
-/* Breadcrumb navigation */
+/* Breadcrumb navigation
 .breadcrumb {
     font-size: 0.9rem;
     padding: 0.5rem 0;
@@ -54,25 +54,14 @@
     font-size: 1.5rem;
 }
   
-.breadcrumb li:not(:last-child)::after {
-    content: ">";
-    margin: 0 0.5rem;
-    color: #ffffff;
-}
-  
 .breadcrumb a {
     text-decoration: none;
     color: #ff9416;
     transition: color 0.2s;
 }
-  
-.breadcrumb a:hover {
-    color: #ffffff;
-}
 
-/* Responsive styling */
 @media (max-width: 435px) {
     .breadcrumb li {
         font-size: 1.2rem;
     }
-}
+}*/

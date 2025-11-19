@@ -1,14 +1,173 @@
-.breadcrumb {
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    color: #ff9416;
-    background-color: transparent;
-}
-
 .about-hero {
-    min-height: 100vh;
     background-image: url('/assets/images/lizard-background-1920.webp');
     background-size: cover;
     background-position: center;
-    padding: clamp(2rem, 6vw, 4rem);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 60px;
+    display: block;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li,
+.breadcrumb a {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 0.5rem;
+    color: #ffffff;
+}
+
+.breadcrumb a:hover {
+    color: red;
+    opacity: 1;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 60px; /* extra padding-top so text never hits breadcrumb */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.about-image-box {
+    text-align: center;
+}
+
+.about-image-box img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+.resume-link {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 26px;
+    background: #ff9800; /* Suns sunset orange */
+    color: #fff;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.resume-link:hover {
+    background: #e58800;
+}
+
+.about-text-box {
+    max-width: 600px;
+    color: white;
+}
+
+.about-text-box h1 {
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+}
+
+.about-text-box p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.skills-section {
+    margin: 60px auto 100px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill {
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 40px;
+    font-size: 0.95rem;
+    backdrop-filter: blur(4px);
+    color: white;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.skill:hover {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Styling */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 110px;
+        gap: 2rem;
+    }
+
+    .about-text-box h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-text-box p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .breadcrumb {
+        top: 15px;
+        left: 15px;
+    }
+
+    .about-container {
+        padding: 100px 15px 40px;
+    }
+
+    .skill {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
 }
