@@ -162,6 +162,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .about-hero {
+        background-image: url('/assets/images/sedona-background-768.webp');
+    }
+}
+
 @media (max-width: 500px) {
     .about-text-box p {
         font-size: 1rem;
