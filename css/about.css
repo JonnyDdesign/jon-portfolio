@@ -47,7 +47,7 @@
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px 60px;
+    padding: 80px 20px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,8 +69,8 @@
     display: inline-block;
     margin-top: 14px;
     padding: 12px 26px;
-    background: #ff9800;
-    color: #FFFFFF;
+    background: #FFFFFF;
+    color: #000000;
     font-weight: 600;
     border-radius: 40px;
     text-decoration: none;
