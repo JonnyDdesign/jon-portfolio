@@ -2,8 +2,42 @@ body {
     background: linear-gradient(180deg, #a105d8, #ff9416);
 }
 
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb li,
+.breadcrumb a {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 0.5rem;
+    color: #FFFFFF;
+}
+
+.breadcrumb a:hover {
+    color: #004D1E;
+    opacity: 1;
+}
+
 main h1 {
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: center;
     padding: 40px;
     font-family: 'Irish Grover', Times, serif;
@@ -25,7 +59,7 @@ main h1 {
     background-color: transparent;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px 10px #ffffff;
+    box-shadow: 0 0 10px 10px #FFFFFF;
     max-width: 500px;
     text-align: center;
 }
@@ -39,13 +73,13 @@ main h1 {
 
 .portfolio-card p {
     font-size: 1.4rem;
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: left;
     padding: 0.5rem;
 }
 
 .portfolio-button {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #a105d8;
     border: 1px solid #000000;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -61,7 +95,7 @@ main h1 {
 
 .portfolio-button:hover {
     background-color: #a105d8;
-    color: #ffffff;
+    color: #FFFFFF;
     border: 1px solid #ff9416;
     transition: 0.3s;
 }
