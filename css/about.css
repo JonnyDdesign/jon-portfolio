@@ -81,7 +81,8 @@
 }
 
 .resume-link:hover {
-    background: #e58800;
+    background: #016bfd;
+    color: #FFFFFF;
 }
 
 .about-text-box {
@@ -111,10 +112,10 @@
 }
 
 .skills-section h2 {
-    color: #016bfd;
-    font-size: 2.2rem;
+    color: #000000;
+    font-size: 2.3rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px #000000;
+    text-transform: uppercase;
 }
 
 .skill-list {
@@ -131,16 +132,9 @@
     background: #016bfd;
     border: 1px solid #000000;
     border-radius: 40px;
-    font-size: 1rem;
-    backdrop-filter: blur(4px);
+    font-size: 1.1rem;
     color: #FFFFFF;
     font-weight: 500;
-    transition: 0.2s ease;
-}
-
-.skill:hover {
-    background: rgba(255, 255, 255, 0.28);
-    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Responsive Styling */
