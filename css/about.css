@@ -47,7 +47,7 @@
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 80px 20px 60px;
+    padding: 60px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,19 +62,22 @@
     width: 100%;
     height: auto;
     max-width: 400px;
-    border-radius: 12px;
+    border-radius: 8px;
+    filter: drop-shadow(0px 0px 8px black);
 }
 
 .resume-link {
     display: inline-block;
-    margin-top: 14px;
+    margin-top: 2rem;
     padding: 12px 26px;
     background: #FFFFFF;
     color: #000000;
+    font-size: 1.2rem;
     font-weight: 600;
     border-radius: 40px;
     text-decoration: none;
     transition: 0.2s ease;
+    filter: drop-shadow(0px 0px 8px black);
 }
 
 .resume-link:hover {
@@ -93,27 +96,31 @@
 
 .about-text-box p {
     margin-bottom: 1rem;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    opacity: 0.95;
+    line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 .skills-section {
+    max-width: 1300px;
     margin: 60px auto 100px;
     padding: 20px;
     text-align: center;
     color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
 }
 
 .skills-section h2 {
-    font-size: 2rem;
+    color: #016bfd;
+    font-size: 2.2rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000000;
 }
 
 .skill-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 1.5rem;
     justify-content: center;
     max-width: 900px;
     margin: 0 auto;
@@ -121,10 +128,10 @@
 
 .skill {
     padding: 10px 18px;
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: #016bfd;
+    border: 1px solid #000000;
     border-radius: 40px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     backdrop-filter: blur(4px);
     color: #FFFFFF;
     font-weight: 500;
