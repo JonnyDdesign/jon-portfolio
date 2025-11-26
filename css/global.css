@@ -33,35 +33,3 @@
     font-style: normal;
     font-display: swap;
 }
-
-/* Breadcrumb navigation
-.breadcrumb {
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    color: #ff9416;
-    background-color: #a105d8;
-}
-
-.breadcrumb ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-  
-.breadcrumb li {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-}
-  
-.breadcrumb a {
-    text-decoration: none;
-    color: #ff9416;
-    transition: color 0.2s;
-}
-
-@media (max-width: 435px) {
-    .breadcrumb li {
-        font-size: 1.2rem;
-    }
-}*/
